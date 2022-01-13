@@ -23,7 +23,7 @@ public class Ej05C_Aitor {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int sueldos[][];
-        int n, g, media, m = 0, h = 0, salir = 0;
+        int n, g, mediah = 0, mediam = 0, m = 0, h = 0, salir = 0, i;
         
         System.out.println("Bienvenido a un programa para registrar sueldos de hombres y mujeres de una empresa y detectar si existe brecha salarial entre ambos");
         System.out.print("Introduzca cuantos sueldos va a introducir:");
@@ -35,24 +35,33 @@ public class Ej05C_Aitor {
             g = sc.nextInt();
             switch(g){
                 case 0:
-                    while(h < sueldos[0][h]){
                         System.out.print("Introduzca su sueldo: ");
                         sueldos[0][h] = sc.nextInt();
                         h++;
                         salir++;
-                    }
                     break;
                 case 1:
-                    while(m < sueldos[1][m]){
                         System.out.print("Introduzca su sueldo: ");
-                        sueldos[0][m] = sc.nextInt();
+                        sueldos[1][m] = sc.nextInt();
                         m++;
                         salir++;
-                    }
+                        break;
             }
             
-        }while (salir == n);
+        }while (salir != n);
         
+        for (i = 0; i < sueldos[0].length;i++){
+            mediah += sueldos[0][i];
+        }
+        for (i = 0; i < sueldos[1].length; i++){
+            mediam += sueldos[1][i];
+        }
+        
+        mediah = mediah/n;
+        mediam = mediam/n;
+        
+        System.out.println("Este es el sueldo medio de los hombres introducidos: "+mediah);
+        System.out.println("Este es el sueldo medio de las mujeres introducidas: "+mediam);
         
     }
     
