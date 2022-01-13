@@ -20,7 +20,7 @@ public class Ej4c_Aitor {
         int min[] = new int[4];
         int max[] = new int[4];
         int media[] = {0,0,0,0};
-        int i = 0, j = 0, c = 1;
+        int i, j, c = 1;
         
         
         System.out.println("Bienvenido a un programa para almacenar las notas de 4 alumnos y 5 asignaturas. Una vez introducido las notas el programa mostrará la nota mínima, máxima y media de cada alumno.");
