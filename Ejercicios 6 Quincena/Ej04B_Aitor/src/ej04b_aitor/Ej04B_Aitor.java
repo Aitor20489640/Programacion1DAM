@@ -22,34 +22,28 @@ public class Ej04B_Aitor {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String frase;
-        char ch[];
         int a = 0, e = 0, i = 0, o = 0, u = 0, j;
 
         System.out.println("Bienvenido a un programa donde se mostraran cuantas vocales y cuales tiene la frase introducida.");
         System.out.println("Introduce una frase:");
         frase = sc.nextLine();
-        ch = frase.toCharArray();
+        frase = frase.toLowerCase();
 
-        for (j = 0; j < ch.length; j++) {
-            switch (ch[j]) {
+        for (j = 0; j < frase.length(); j++) {
+            switch (frase.charAt(j)) {
                 case 'a':
-                case 'A':
                     a++;
                     break;
                 case 'e':
-                case 'E':
                     e++;
                     break;
                 case 'i':
-                case 'I':
                     i++;
                     break;
                 case 'o':
-                case 'O':
                     o++;
                     break;
                 case 'u':
-                case 'U':
                     u++;
                     break;
                 default:
