@@ -15,7 +15,7 @@ public class Ej18_Aitor {
 
     public static void main(String[] args) {
         int num[] = new int[30];
-        int  i = 0;
+        int  i;
         
         for (i = 0; i < num.length; i++) {
             num[i] = (int) (Math.random() * 10);
