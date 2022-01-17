@@ -17,15 +17,15 @@ public class Ej16_Aitor {
     
     public static void main(String[] args) {
         int num[];
-        int i, j, cuantos = 0, pos = 0;
+        int i, j, cuantos = 0, pos = 0, n = 10;
         
-        for(i = 1; i <= 10; i++){
+        for(i = 1; i <= n; i++){
             cuantos += i;
         }
         
         num = new int[cuantos];
         
-        for (i = 1; i <= 10; i++) {
+        for (i = 1; i <= n; i++) {
             Arrays.fill(num, pos, pos + i, i);
             pos += i;
         }
