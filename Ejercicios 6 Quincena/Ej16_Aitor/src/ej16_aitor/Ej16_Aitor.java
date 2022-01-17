@@ -16,19 +16,20 @@ public class Ej16_Aitor {
 
     
     public static void main(String[] args) {
-        int num[] = new int[55];
-        int i= 0;
+        int num[];
+        int i, j, cuantos = 0, pos = 0;
         
-        Arrays.fill(num, 0, 1, 1);
-        Arrays.fill(num, 1, 3, 2);
-        Arrays.fill(num, 3, 6, 3);
-        Arrays.fill(num, 6, 10, 4);
-        Arrays.fill(num, 10, 15, 5);
-        Arrays.fill(num, 15, 21, 6);
-        Arrays.fill(num, 21, 28, 7);
-        Arrays.fill(num, 28, 36, 8);
-        Arrays.fill(num, 36, 45, 9);
-        Arrays.fill(num, 45, 55, 10);
+        for(i = 1; i <= 10; i++){
+            cuantos += i;
+        }
+        
+        num = new int[cuantos];
+        
+        for (i = 1; i <= 10; i++) {
+            Arrays.fill(num, pos, pos + i, i);
+            pos += i;
+        }
+
                 
         System.out.println("Este es el valor del vector.");
         for (i = 0; i < num.length; i++) {
