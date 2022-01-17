@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package ej18_aitor;
-import java.util.*;
+import java.util.Arrays;
 
 /**
  *
@@ -14,7 +14,6 @@ import java.util.*;
 public class Ej18_Aitor {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
         int num[] = new int[30];
         int  i = 0;
         
@@ -23,10 +22,8 @@ public class Ej18_Aitor {
         }
         Arrays.sort(num);
         
-        System.out.print("Estos son los valores del vector: ");
-        for (i = 0; i < num.length; i++) {
-            System.out.print(num[i]+" ");
-        }
+        String array = Arrays.toString(num);
+        System.out.print("Estos son los valores del vector: "+array);
         
     }
     
