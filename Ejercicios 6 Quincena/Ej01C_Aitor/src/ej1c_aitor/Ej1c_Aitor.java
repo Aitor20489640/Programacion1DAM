@@ -15,7 +15,7 @@ public class Ej1c_Aitor {
 
     public static void main(String[] args) {
         int arr[][] = new int [5][5];
-        int i = 0, j = 0, cont = 1;
+        int i, j, cont = 1;
         
         for (i = 0; i < arr.length; i++){
             for (j = 0; j < arr[i].length; j++){
