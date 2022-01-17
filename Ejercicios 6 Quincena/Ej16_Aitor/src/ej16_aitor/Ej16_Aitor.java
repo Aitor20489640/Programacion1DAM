@@ -31,11 +31,8 @@ public class Ej16_Aitor {
         }
 
                 
-        System.out.println("Este es el valor del vector.");
-        for (i = 0; i < num.length; i++) {
-            System.out.print(num[i]+" ");
-        }
-        System.out.println();
+        String array = Arrays.toString(num);
+        System.out.println("Array: "+array);
     }
     
 }
