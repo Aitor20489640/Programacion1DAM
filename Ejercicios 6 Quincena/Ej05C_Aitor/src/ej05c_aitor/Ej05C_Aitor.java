@@ -57,8 +57,8 @@ public class Ej05C_Aitor {
             mediam += sueldos[1][i];
         }
         
-        mediah = mediah/n;
-        mediam = mediam/n;
+        mediah = mediah/h;
+        mediam = mediam/m;
         
         System.out.println("Este es el sueldo medio de los hombres introducidos: "+mediah);
         System.out.println("Este es el sueldo medio de las mujeres introducidas: "+mediam);
