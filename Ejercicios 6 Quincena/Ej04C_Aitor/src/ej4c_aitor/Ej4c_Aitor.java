@@ -20,14 +20,13 @@ public class Ej4c_Aitor {
         int min[] = new int[4];
         int max[] = new int[4];
         int media[] = {0,0,0,0};
-        int i, j, c = 1;
+        int i, j;
         
         
         System.out.println("Bienvenido a un programa para almacenar las notas de 4 alumnos y 5 asignaturas. Una vez introducido las notas el programa mostrará la nota mínima, máxima y media de cada alumno.");
         
         for(i = 0; i < arr.length; i++){
-            System.out.println("Introduzca las notas del alumno "+c+":");
-            c++;
+            System.out.println("Introduzca las notas del alumno "+(i+1)+":");
             for(j = 0; j < arr[i].length; j++){
                 System.out.print("Introduzca una nota: ");
                 arr[i][j] = sc.nextInt();
@@ -59,16 +58,13 @@ public class Ej4c_Aitor {
             media[i] = media[i] / arr[0].length;
         }
         
-        c = 1;
         System.out.println("--------------------");
-        for(i = 0; i < 4; i++){
-            System.out.println("estudiante "+c);
+        for(i = 0; i < min.length; i++){
+            System.out.println("estudiante "+(i+1));
             System.out.println("minima: "+min[i]);
             System.out.println("maxima: "+max[i]);
             System.out.println("media: "+media[i]);
-            System.out.println("--------------------");
-            c++;
-            
+            System.out.println("--------------------");            
         }
     }
     
