@@ -12,11 +12,11 @@ import java.util.Arrays;
  */
 public class EjObligatorioQuincena6_Aitor {
     
-    public static void entradaNombres(String[] nombres){
+    public static void entradaNombres(String[] n){
         Scanner sc = new Scanner(System.in);
-        for (int i = 0; i < 8; i++){
+        for (int i = 0; i < n.length; i++){
             System.out.print("Introduzca el nombre de un estudiante: ");
-            nombres[i] = sc.nextLine();
+            n[i] = sc.nextLine();
             
         }
     }
@@ -28,7 +28,7 @@ public class EjObligatorioQuincena6_Aitor {
         
         System.out.println("Bienvenido");
         entradaNombres(nombres);
-        
+        System.out.println("El vector es: "+ Arrays.toString(nombres));
       
     }
 }
