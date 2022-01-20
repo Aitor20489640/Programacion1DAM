@@ -5,6 +5,7 @@
 package ejobligatorioquincena6_aitor;
 import java.util.Scanner;
 import java.util.Arrays;
+import metodos.meto;
 
 /**
  *
@@ -12,23 +13,18 @@ import java.util.Arrays;
  */
 public class EjObligatorioQuincena6_Aitor {
     
-    public static void entradaNombres(String[] n){
-        Scanner sc = new Scanner(System.in);
-        for (int i = 0; i < n.length; i++){
-            System.out.print("Introduzca el nombre de un estudiante: ");
-            n[i] = sc.nextLine();
-            
-        }
-    }
+
 
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String nombres[] = new String[8];
+        char alu[][] = new char[2][3];
         
         System.out.println("Bienvenido");
-        entradaNombres(nombres);
+        meto.inputNombres(nombres);
         System.out.println("El vector es: "+ Arrays.toString(nombres));
-      
+        meto.inputAlumnos(alu);
     }
+    
 }
