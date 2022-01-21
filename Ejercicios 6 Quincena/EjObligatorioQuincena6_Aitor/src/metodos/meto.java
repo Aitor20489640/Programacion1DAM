@@ -33,19 +33,78 @@ public class meto {
     
     public static void inputCorrectas(char[] c){
         Scanner sc = new Scanner(System.in);
+        char carac;
+        boolean correcto = true;
         for (int i = 0; i < c.length; i++){
-            System.out.println("Introduce la respuesta correcta a la pregunta "+(i+1)+": ");
-            c[i] = sc.nextLine().charAt(0);
+            System.out.print("Introduce la respuesta correcta a la pregunta "+(i+1)+": ");
+            carac = sc.nextLine().charAt(0);
+            switch(carac){
+                case 'A':
+                case 'B':
+                case 'C':
+                case 'D':
+                case 'E':
+                    c[i] = carac;
+                    break;
+                default:
+                    do{
+                        System.out.print("Introduzca una opcion valida: ");
+                        carac = sc.nextLine().charAt(0);
+                        switch (carac) {
+                            case 'A':
+                            case 'B':
+                            case 'C':
+                            case 'D':
+                            case 'E':
+                                c[i] = carac;
+                                correcto = false;
+                                break;
+                        }
+                    }while(correcto);
+                    
+            }
         }
     }
     
+    /**
+     * Metodo para introducir las respuestas de los alumnos.
+     * @param c matriz donde se guardaran las respuestas de los alumnos.
+     */
+    
     public static void inputAlumnos(char[][] c){
         Scanner sc = new Scanner(System.in);
+        char carac;
+        boolean correcto = true;
         for (int i = 0; i < c.length; i++){
             System.out.println("Pon las respuestas del alumno "+(i + 1)+": ");
             for (int j = 0; j < c[0].length; j++){
                 System.out.print("Escribe la respuesta a la pregunta "+(j + 1)+": ");
-                c[i][j] = sc.nextLine().charAt(0);
+                carac = sc.nextLine().charAt(0);
+                switch (carac) {
+                    case 'A':
+                    case 'B':
+                    case 'C':
+                    case 'D':
+                    case 'E':
+                        c[i][j] = carac;
+                        break;
+                    default:
+                        do {
+                            System.out.print("Introduzca una opcion valida: ");
+                            carac = sc.nextLine().charAt(0);
+                            switch (carac) {
+                                case 'A':
+                                case 'B':
+                                case 'C':
+                                case 'D':
+                                case 'E':
+                                    c[i][j] = carac;
+                                    correcto = false;
+                                    break;
+                            }
+                        } while (correcto);
+
+                }
             }
             System.out.println("");
         }

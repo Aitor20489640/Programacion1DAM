@@ -18,13 +18,59 @@ public class EjObligatorioQuincena6_Aitor {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        int nPreguntas, menu;
         String nombres[] = new String[8];
-        char alu[][] = new char[2][3];
+        char alu[][];
+        char correcta[];
         
-        System.out.println("Bienvenido");
+        
+        System.out.print("Bienvenido, diga el numero de preguntas que hay en el examen: ");
+        nPreguntas = sc.nextInt();
+        while(nPreguntas <= 0){
+            System.err.println("Valor invalido, el numero de preguntas tiene que ser mayor a 0.");
+            System.out.print("Introduzca un valor superior a 0: ");
+            nPreguntas = sc.nextInt();
+        }
+        alu = new char[8][nPreguntas];
+        correcta = new char[nPreguntas];
+        
         meto.inputNombres(nombres);
-        System.out.println("El vector es: "+ Arrays.toString(nombres));
+        meto.inputCorrectas(correcta);
         meto.inputAlumnos(alu);
+        
+        System.out.println("Menu:\n"
+                +"Opción 1 Notas: Muestra la nota obtenida de cada estudiante. Esta nota corresponde al número de aciertos que tuvo el estudiante.\n"
+                + "Opción 2 Media: Muestra la media de aciertos de los 8 alumnos.\n"
+                + "Opción 3 Nota Alumno: dado un nombre de un alumno, muestra su nota.\n"
+                + "Opción 4 Pregunta: Muestra el número de la pregunta más acertada.\n"
+                + "Opcion 5 Salir.");
+        
+        do{
+            System.out.print("Elija una opción: ");
+           menu = sc.nextInt(); 
+            switch(menu){
+            case 1:
+                System.out.println("1");
+                break;
+            case 2:
+                System.out.println("2");
+                break;
+            case 3:
+                System.out.println("3");
+                break;
+            case 4:
+                System.out.println("4");
+                break;
+            case 5:
+                System.out.println("Gracias por utilizar este programa.");
+                break;
+            default:
+                System.err.println("Opcion invalida");
+                break;
+                
+        }
+        }while(menu != 5);
+        
     }
     
 }
