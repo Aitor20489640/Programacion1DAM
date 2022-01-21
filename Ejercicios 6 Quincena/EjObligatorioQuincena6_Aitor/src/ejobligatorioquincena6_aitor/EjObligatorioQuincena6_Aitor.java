@@ -21,6 +21,8 @@ public class EjObligatorioQuincena6_Aitor {
         String nombres[] = new String[8];
         char alu[][];
         char correcta[];
+        int nota[];
+        
         
         
         System.out.print("Bienvenido, diga el numero de preguntas que hay en el examen: ");
@@ -30,12 +32,12 @@ public class EjObligatorioQuincena6_Aitor {
             System.out.print("Introduzca un valor superior a 0: ");
             nPreguntas = sc.nextInt();
         }
-        alu = new char[8][nPreguntas];
+        alu = new char[nombres.length][nPreguntas];
         correcta = new char[nPreguntas];
         
         meto.inputNombres(nombres);
         meto.inputCorrectas(correcta);
-        meto.inputAlumnos(alu);
+        meto.inputAlumnos(alu, nombres);
         
         System.out.println("Menu:\n"
                 +"Opción 1 Notas: Muestra la nota obtenida de cada estudiante. Esta nota corresponde al número de aciertos que tuvo el estudiante.\n"
@@ -49,7 +51,14 @@ public class EjObligatorioQuincena6_Aitor {
            menu = sc.nextInt(); 
             switch(menu){
             case 1:
-                System.out.println("1");
+                
+                float notafloat[] = meto.notaAlumnos(alu, correcta, nombres, nPreguntas);
+                nota = new int[notafloat.length];
+                meto.floatToInt(notafloat, nota);              
+                
+                for (int i = 0; i < nombres.length; i++){
+                    System.out.println("La nota de "+nombres[i]+" es: "+nota[i]);
+                }
                 break;
             case 2:
                 System.out.println("2");
