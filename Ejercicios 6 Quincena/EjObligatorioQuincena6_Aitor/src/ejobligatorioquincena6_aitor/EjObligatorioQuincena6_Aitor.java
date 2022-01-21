@@ -4,7 +4,6 @@
  */
 package ejobligatorioquincena6_aitor;
 import java.util.Scanner;
-import java.util.Arrays;
 import metodos.meto;
 
 /**
