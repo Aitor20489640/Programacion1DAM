@@ -7,12 +7,21 @@ import java.util.Scanner;
 import metodos.meto;
 
 /**
- *
+ * 
+ * Programa que califique un examen de preguntas de selección múltiple presentado por 8 estudiantes de Programación.
+ * En cada una de las preguntas del examen, el estudiante debe elegir una de cinco opciones,
+ * identificadas con las letras A, B, C, D y E.
+ * 
  * @author aitor
+ * 
  */
 public class EjObligatorioQuincena6_Aitor {
     
-
+    /**
+     * Metodo principal del programa.
+     * 
+     * @param args los argumentos de linea de comando
+     */
 
 
     public static void main(String[] args) {
@@ -21,7 +30,7 @@ public class EjObligatorioQuincena6_Aitor {
         String nombres[] = new String[8];
         char alu[][];
         char correcta[];
-        int nota[];
+        int nota[] = null;
         
         
         
@@ -39,6 +48,10 @@ public class EjObligatorioQuincena6_Aitor {
         meto.inputCorrectas(correcta);
         meto.inputAlumnos(alu, nombres);
         
+        float notafloat[] = meto.notaAlumnos(alu, correcta, nombres, nPreguntas);
+        nota = new int[notafloat.length];
+        meto.floatToInt(notafloat, nota); 
+        
         System.out.println("Menu:\n"
                 +"Opción 1 Notas: Muestra la nota obtenida de cada estudiante. Esta nota corresponde al número de aciertos que tuvo el estudiante.\n"
                 + "Opción 2 Media: Muestra la media de aciertos de los 8 alumnos.\n"
@@ -51,23 +64,18 @@ public class EjObligatorioQuincena6_Aitor {
            menu = sc.nextInt(); 
             switch(menu){
             case 1:
-                
-                float notafloat[] = meto.notaAlumnos(alu, correcta, nombres, nPreguntas);
-                nota = new int[notafloat.length];
-                meto.floatToInt(notafloat, nota);              
-                
                 for (int i = 0; i < nombres.length; i++){
                     System.out.println("La nota de "+nombres[i]+" es: "+nota[i]);
                 }
                 break;
             case 2:
-                System.out.println("2");
+                meto.mediaAlumnos(alu, correcta, nombres, nPreguntas);
                 break;
             case 3:
-                System.out.println("3");
+                meto.buscarNota(nota, nombres);
                 break;
             case 4:
-                System.out.println("4");
+                meto.pregunta(alu, correcta, nPreguntas);
                 break;
             case 5:
                 System.out.println("Gracias por utilizar este programa.");
